@@ -1,6 +1,6 @@
-# myself
+# vue-component-collection
 
-> A Vue.js project
+> vue组件收集
 
 ## Build Setup
 
