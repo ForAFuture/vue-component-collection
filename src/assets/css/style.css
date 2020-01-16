@@ -1,0 +1,423 @@
+.pull-left , .lf{
+  float: left;
+}
+.pull-right , .rf{
+  float: right;
+}
+.font16 {
+  color: #5A5E66;
+  font-size: 16px;
+}
+.font15 {
+  font-size: 15px;
+}
+.font14 {
+  color: #5A5E66;
+  font-size: 14px;
+}
+.font12 {
+  color: #5A5E66;
+  font-size: 12px;
+}
+.font12-bold {
+  font-size: 12px;
+  font-weight: bold;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt15 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr15 {
+  margin-right: 15px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb15 {
+  margin-bottom: 15px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+/*     特效集合   start */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+/*     特效集合   end */
+.bg-color-white {
+  background: #fff;
+}
+.bg-color-black {
+  background: #262626;
+}
+.bg-color-blue {
+  background: #016DFB;
+}
+.bg-color-gray{
+  background: #f4f4f4;
+}
+.color-blue {
+  color: #016DFB;
+}
+.bg-color-gray {
+  background: #F5F7FA;
+}
+.color-gray {
+  color: #F5F7FA;
+}
+/*ele-ui 弹出框 按钮 复选框样式修改*/
+.el-message-box{
+  width: 460px !important;
+  vertical-align: initial !important;
+  height: 240px !important;
+}
+.el-message-box__header{
+  padding: 0 !important;
+  position: relative;
+  width: 100% !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding-left: 15px !important;
+  text-align: left !important;
+  color: #666 !important;
+  background: #F3F3F3 !important;
+}
+.el-message-box__close, .el-message-box__headerbtn{
+  top: 10px !important;
+  right: 15px !important;
+  font-weight: lighter !important;
+}
+.el-message-box__title{
+  color: #666 !important;
+  font-weight: initial !important;
+  line-height: 2!important;
+}
+.el-message-box__btns{
+  text-align: center !important;
+  padding-top: 0 !important;
+}
+.el-message-box__btns>button{
+  padding: 12px 25px !important;
+  font-size: 15px !important;
+  border-radius: 0px !important;
+  min-width: 126px !important;
+}
+.el-message-box__btns>.el-button--primary{
+  background-color: #016DFB !important;
+  border-color: #016DFB !important;
+  padding: 12px 30px !important;
+  color: white !important;
+  margin-left: 20px !important;
+}
+.el-message-box__status{
+  display: none !important;
+}
+.el-message-box__content{
+  height: 128px;
+  padding: 0 20px !important;
+  line-height: 135px !important;
+}
+.el-message-box__message>p{
+  text-align: center !important;
+  height: 128px !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+  padding-top: 40px !important;
+  color: #333 !important;
+  word-wrap: break-word !important;
+}
+.el-message-box__btns>.el-button--primary.redcolor{
+  background-color: #016DFB !important;
+  border-color: #016DFB !important;
+  color: white !important;
+}
+.el-message-box__close:hover {
+  color: #016DFB !important;
+}
+.el-select-dropdown > .popper__arrow {
+  left: 50% !important;
+}
+.bottom-border-1px {
+  border-bottom: 1px solid #D8DCE5;
+}
+.el-dropdown-menu {
+  min-width: 100px !important;
+  padding: 10px !important;
+}
+.el-dropdown-menu .el-dropdown-menu__item {
+  padding: 0 10px;
+}
+.search{
+  width: 200px!important;
+  height: 30px!important;
+}
+.width160 {
+  width: 160px !important;
+}
+.width100 {
+  width: 100px !important;
+  height: 30px;
+}
+.width180 {
+  width: 180px !important;
+}
+.width270 {
+  width: 270px !important;
+}
+.width240{
+  width:240px !important;
+  height: 30px;
+}
+.el-date-editor {
+  width: 230px !important;
+}
+.el-date-editor .el-range-separator {
+  width: 7%;
+  font-size: 12px;
+  padding: 0;
+}
+
+.el-popper {
+  z-index: 50 !important;
+}
+.zIndex-popper {
+  z-index: 2500 !important;
+}
+
+/*****************************************************************************/
+.bg_f4{
+  background: #f4f4f4;
+}
+.bg_F4F4F5{
+  background-color: #F4F4F5;
+}
+.text-ellipsis{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+._fff{
+  background: #ffffff!important;
+}
+._img , .cover-img{
+  width: 100%;
+  height: 100%;
+}
+.padd-10{
+  padding: 0 10px;
+}
+.wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+.fullWidth{
+  width: 100%;
+}
+.clear:before{
+  content: "";
+  display: table;
+}
+.clear:after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline>li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+  outline: none;
+}
+ul.list-inline li{
+  float: left;
+  margin: 0;
+}
+.clear:after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.clear:before{
+  content: "";
+  display: table;
+}
+.contain-img{
+  width: 100%;
+  height: 100%
+}
+.cursor{
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.userSelectNone{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+/*去除input自带外边框*/
+input{
+  outline: 0;
+}
+/*去除IEinput删除图标*/
+input::-ms-clear{display:none;}
+.el-select {
+  margin-right: 15px;
+}
+/*修改element 下拉框 鼠标样式*/
+.el-select .el-input__inner{
+  cursor:auto;
+}
+.el-select .el-input .el-input__icon{
+  cursor:auto;
+  line-height: 30px;
+}
+
+.no_close .el-message-box__close{
+  display: none;
+}
+button{
+  cursor: pointer;
+}
+.line:after{
+  content: "";
+  width: 94%;
+  height: 2px;
+  background-color:  #8BC4FF ;
+  border-top: 1px solid #ededed;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.font-7DB9F7{
+  color: #7DB9F7;
+}
+
+.flex_box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+.fs0{
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+}
+.flex_item{
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.flex_center{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*表单分析-合计人*/
+.Total-people{
+  margin-left: 20px;
+}
+/*************************************************************************/
+/**********************************日期事件空间样式 start***************************************/
+
+.el-range-editor .el-range-input {
+  line-height: 22px;
+  font-size: 12px;
+  color: #5A5E66;
+}
+/**********************************日期事件空间样式 end***************************************/
+.el-input__inner {
+  font-size: 12px;
+}
+.el-main {
+  padding: 10px 0 0;
+}
+.el-pagination {
+  background-color: #fff;
+  text-align: right;
+}
+.w-title {
+  height: 56px;
+  line-height: 56px;
+  background: #fff;
+  padding-left: 20px;
+  color: #5a5e66;
+  font-size: 16px;
+}

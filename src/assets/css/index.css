@@ -1,0 +1,36 @@
+@import "./style.css";
+/*@import "iconfont.css";*/
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font: 14px/1.5 "Microsoft YaHei","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",Arial,sans-serif;
+}
+div, ul, li, h1, h2, h4, h5, h6, dl, dt, dd, p,span, img, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+#app{
+  min-width: 450px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  cursor:pointer;
+}
+a:hover {
+  color: #016dfb;
+  text-decoration: none;
+}
+input{
+  -webkit-user-select: text !important;
+}
