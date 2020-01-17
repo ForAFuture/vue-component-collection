@@ -6,7 +6,7 @@
         <i v-else class="icon el-icon-s-unfold"></i>
       </div>
     </div>
-    <div class="sys-name">Person Symtem</div>
+    <div class="sys-name">vue-component-collection</div>
     <div class="header-right">
       <el-tooltip class="full-screen" effect="dark" content="全屏" placement="bottom">
         <i class="el-icon-rank" @click="fullScreen"></i>
@@ -79,7 +79,7 @@ export default {
       }
     }
     .sys-name{
-      width: 200px;
+      // width: 200px;
       float: left;
       line-height: 60px;
       text-align: center;

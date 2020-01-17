@@ -3,8 +3,8 @@
     <cont-title title="HOME"></cont-title>
     <div class="home-content">
       <p>
-        <span>github地址： </span>
-        <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        <span>github 地址： </span>
+        <a href="https://github.com/ForAFuture/vue-component-collection" target="_blank" rel="noopener noreferrer">vue-component-collection</a>
       </p>
     </div>
   </div>
