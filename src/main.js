@@ -7,7 +7,6 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/index.js'
 import './assets/css/element-variables.scss'
 import './assets/css/index.css'
-import 'echarts/theme/macarons.js'
 import store from '@/store'
 import contTitle from '@/components/contTitle'
 

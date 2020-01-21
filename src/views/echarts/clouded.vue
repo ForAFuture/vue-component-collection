@@ -14,6 +14,7 @@
   </div>
 </template>
 <script>
+import 'echarts/theme/macarons.js'
 import cloudData from './couldData'
 let echarts = require('echarts/lib/echarts')
 require('echarts-wordcloud')
@@ -101,6 +102,7 @@ export default {
   mounted () {
     this.draw_myChart()
   },
+  // 设置宽高时，不需要render函数
   render (h) {
     return h('div', {
       attrs: {id: 'word_cloud_view_id'},
