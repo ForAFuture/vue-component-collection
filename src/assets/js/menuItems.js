@@ -10,7 +10,7 @@ export default [
     title: 'cron定时'
   },
   {
-    icon: 'el-icon-s-home',
+    icon: 'el-icon-pie-chart',
     // route: 'echarts',
     title: '图表',
     subs: [
@@ -23,5 +23,10 @@ export default [
         title: '词云图'
       }
     ]
+  },
+  {
+    icon: 'el-icon-picture',
+    route: 'preview',
+    title: '图片预览'
   }
 ]

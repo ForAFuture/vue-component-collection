@@ -9,6 +9,10 @@ import './assets/css/element-variables.scss'
 import './assets/css/index.css'
 import store from '@/store'
 import contTitle from '@/components/contTitle'
+import VuePreview from 'vue-preview'
+
+// defalut install
+Vue.use(VuePreview)
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

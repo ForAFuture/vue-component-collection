@@ -14,5 +14,13 @@ export default [
       title: 'cron定时'
     },
     component: () => import('@/views/cron/index')
+  },
+  {
+    path: 'preview',
+    name: 'preview',
+    meta: {
+      title: '图片预览'
+    },
+    component: () => import('@/views/preview/index')
   }
 ]
