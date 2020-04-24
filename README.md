@@ -1,6 +1,6 @@
 # vue-component-collection
 
-> vue组件收集
+> vue个人组件收集
 
 ## Build Setup
 
