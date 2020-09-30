@@ -7,19 +7,25 @@ import models from './models/index.js'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   // base: 'view',
   routes: [
     {
       path: '/',
-      redirect: {name: 'home'}
-    },
-    {
-      path: '/',
-      name: 'home',
+      redirect: {name: 'home'},
       component: () => import('@/views/layout/index'),
       children: models
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.length === 0) {
+    next({name: '404'})
+  } else {
+    next()
+  }
+})
+
+export default router

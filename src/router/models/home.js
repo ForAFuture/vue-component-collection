@@ -1,6 +1,6 @@
 export default [
   {
-    path: 'home',
+    path: '/home',
     name: 'home',
     meta: {
       title: '首页'
@@ -8,7 +8,15 @@ export default [
     component: () => import('@/views/home/index')
   },
   {
-    path: 'cron',
+    path: '/404',
+    name: '404',
+    meta: {
+      title: '404'
+    },
+    component: () => import('@/components/404')
+  },
+  {
+    path: '/cron',
     name: 'cron',
     meta: {
       title: 'cron定时'
@@ -16,7 +24,7 @@ export default [
     component: () => import('@/views/cron/index')
   },
   {
-    path: 'preview',
+    path: '/preview',
     name: 'preview',
     meta: {
       title: '图片预览'

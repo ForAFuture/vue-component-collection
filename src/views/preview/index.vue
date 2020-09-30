@@ -44,7 +44,7 @@ export default {
 <style lang="scss" scoped>
   .vue-preview{
     min-width: 1000px;
-    height: 100%;
+    min-height: 100%;
     background: #fff;
     /deep/ figure{
       display: inline-block;

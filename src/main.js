@@ -10,14 +10,18 @@ import './assets/css/index.css'
 import store from '@/store'
 import contTitle from '@/components/contTitle'
 import VuePreview from 'vue-preview'
+import echarts from 'echarts'
+import vChart from 'vue-echarts'
 
 // defalut install
 Vue.use(VuePreview)
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.use(echarts)
 
 Vue.component('contTitle', contTitle)
+Vue.component('vChart', vChart)
 
 /* eslint-disable no-new */
 new Vue({

@@ -10,18 +10,18 @@
       active-text-color="#ffd04b">
       <template v-for="item in menuList">
         <template v-if="item.subs">
-          <el-submenu :index="item.title" :key="item.route">
+          <el-submenu :index="item.name" :key="item.name">
             <template slot="title">
               <i :class="item.icon"></i>
               <span slot="title">{{ item.title }}</span>
             </template>
-            <el-menu-item :index="itemSub.route" v-for="itemSub in item.subs" :key="itemSub.route">
+            <el-menu-item :index="itemSub.route" v-for="itemSub in item.subs" :key="itemSub.name">
               <span>{{ itemSub.title }}</span>
             </el-menu-item>
           </el-submenu>
         </template>
         <template v-if="!item.subs">
-          <el-menu-item :index="item.route" :key="item.title">
+          <el-menu-item :index="item.route" :key="item.name" v-if="item.name != '404'">
             <i :class="item.icon"></i>
             <span slot="title">{{ item.title }}</span>
           </el-menu-item>
@@ -45,7 +45,7 @@ export default {
       return this.$store.getters.getCollapse
     },
     currentRoute () {
-      return this.$route.path.replace('/', '')
+      return this.$route.path
     }
   },
   mounted () {

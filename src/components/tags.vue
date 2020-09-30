@@ -23,7 +23,10 @@ export default {
   },
   methods: {
     click (tag) {
-      console.log(tag)
+      // console.log(tag)
+      if (tag.path === this.$route.path) {
+        return
+      }
       this.$router.push(tag.path)
     },
     handleClose (tag) {

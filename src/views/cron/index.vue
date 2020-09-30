@@ -6,10 +6,18 @@
         <input-cron v-model="cycleExpr" :hide-year="false"></input-cron>
       </el-col>
     </el-row>
+    <div>
+      <countdown endTime="2020/10/01 01:01:01">
+        <template slot-scope="timeData">
+          <div>{{ timeData.d + '天' + timeData.h + '時' + timeData.m + '分' + timeData.s + '秒' }}</div>
+        </template>
+      </countdown>
+    </div>
   </div>
 </template>
 <script>
 import inputCron from './timerTask/input-cron'
+import countdown from '@/components/commons/countdown'
 export default {
   data () {
     return {
@@ -17,7 +25,8 @@ export default {
     }
   },
   components: {
-    inputCron
+    inputCron,
+    countdown
   }
 }
 </script>

@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scode>
   .layout{
     width: auto;
-    height: 100%;
+    min-height: 100%;
     overflow: hidden;
     .content-box{
       position: absolute;

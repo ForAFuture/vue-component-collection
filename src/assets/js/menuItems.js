@@ -1,32 +1,44 @@
 export default [
   {
     icon: 'el-icon-s-home',
-    route: 'home',
+    route: '/home',
+    name: 'home',
     title: '首页'
   },
   {
+    icon: 'el-icon-warning-outline',
+    route: '/404',
+    name: '404',
+    title: '404'
+  },
+  {
     icon: 'el-icon-time',
-    route: 'cron',
+    route: '/cron',
+    name: 'cron',
     title: 'cron定时'
   },
   {
     icon: 'el-icon-pie-chart',
-    // route: 'echarts',
+    route: 'echarts',
+    name: 'echarts',
     title: '图表',
     subs: [
       {
-        route: 'echarts',
-        title: 'Echart'
+        route: '/echarts/line',
+        name: 'line',
+        title: '折线图'
       },
       {
-        route: 'clouded',
+        route: '/echarts/cloud',
+        name: 'cloud',
         title: '词云图'
       }
     ]
   },
   {
     icon: 'el-icon-picture',
-    route: 'preview',
+    route: '/preview',
+    name: 'preview',
     title: '图片预览'
   }
 ]

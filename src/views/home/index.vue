@@ -19,7 +19,7 @@ export default {
 </script>
 style <style lang="scss" scoped>
   .home{
-    height: 100%;
+    min-height: 100%;
     background: #fff;
     .home-content{
       padding: 10px;
