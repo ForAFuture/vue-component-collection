@@ -24,10 +24,10 @@ export default {
   computed: {
     endTimed () {
       if (this.endTime) {
-        if (typeof this.endTime === 'string') {
+        if (isNaN(this.endTime)) {
           return new Date(this.endTime.replace(/-/g, '/')).getTime()
         } else {
-          return new Date(this.endTime).getTime()
+          return new Date(Number(this.endTime)).getTime()
         }
       } else {
         return new Date().getTime()
@@ -48,6 +48,16 @@ export default {
         this.timeData.h = Math.floor((timeDiff / 1000 / 60 / 60) % 24)
         this.timeData.m = Math.floor((timeDiff / 1000 / 60) % 60)
         this.timeData.s = Math.floor((timeDiff / 1000) % 60)
+
+        if (this.timeData.h < 10) {
+          this.timeData.h = '0' + this.timeData.h
+        }
+        if (this.timeData.m < 10) {
+          this.timeData.m = '0' + this.timeData.m
+        }
+        if (this.timeData.s < 10) {
+          this.timeData.s = '0' + this.timeData.s
+        }
         setTimeout(this.countdown, 1000)
       } else {
         this.endTimeStatus = true
