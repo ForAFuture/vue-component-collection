@@ -4,8 +4,9 @@
     <el-row class="cloud-content">
       <el-col :span="12">
         <p>输入词云数据</p>
-        <el-input class="edit" v-model="inputCloudData" type="textarea" rows="10" placeholder=""></el-input>
-        <el-button type="primary" style="margin-top:15px" @click="setCloud">立即生成</el-button>
+        name: <el-input class="edit" v-model="inputName" placeholder=""></el-input>
+        value: <el-input v-model="inputValue" maxlength="100" placeholder="0-100"></el-input>
+        <el-button type="primary" style="margin-top:15px" @click="setCloud">添加并立即生成</el-button>
       </el-col>
       <el-col :span="12">
         <div id="word_cloud_view_id"></div>
@@ -22,7 +23,8 @@ export default {
   name: 'word_cloud_index',
   data: () => ({
     myChart: null,
-    inputCloudData: '',
+    inputName: '',
+    inputValue: '',
     optionCloud: {
       tooltip: {
         showDelay: 0,
@@ -96,6 +98,12 @@ export default {
       // })
     },
     setCloud () {
+      if (this.inputValue && this.inputName) {
+        this.optionCloud.series[0].data.push({
+          value: this.inputValue,
+          name: this.inputName
+        })
+      }
       this.draw_myChart()
     }
   },
