@@ -116,10 +116,10 @@ export default {
 /* .input-cron, .input-ui {
   / / display: inline-block
   } */
-/deep/ .el-dialog__body {
+.input-cron /deep/ .el-dialog__body {
   padding: 15px 20px;
 }
-/deep/ .el-dialog__footer {
+.input-cron /deep/ .el-dialog__footer {
   padding: 5px 30px 20px 20px;
 }
 .input-cron .ivu-input-wrapper {
@@ -129,7 +129,7 @@ export default {
 .config-btn {
   cursor: pointer;
 }
-/deep/ .el-input-group__append {
+.input-cron /deep/ .el-input-group__append {
   padding: 0 5px;
 }
 

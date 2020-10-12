@@ -6,18 +6,29 @@
         <p>输入词云数据</p>
         name: <el-input class="edit" v-model="inputName" placeholder=""></el-input>
         value: <el-input v-model="inputValue" maxlength="100" placeholder="0-100"></el-input>
+        <span>选择生成形状：</span>
+        <el-select class="type-select" v-model="typeId" @change="typeChange">
+          <el-option
+            v-for="item in imgType"
+            :key="item.id"
+            :label="item.label"
+            :value="item.id">
+          </el-option>
+        </el-select>
         <el-button type="primary" style="margin-top:15px" @click="setCloud">添加并立即生成</el-button>
       </el-col>
       <el-col :span="12">
+        <div class="chart-name">{{ imgType[typeId - 1].label }}</div>
         <div ref="cloudChart" id="word_cloud_view_id"></div>
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
-import 'echarts/theme/macarons.js'
+// import 'echarts/theme/macarons.js'
 import cloudData from './couldData'
-let echarts = require('echarts/lib/echarts')
+// let echarts = require('echarts/lib/echarts')
+import echarts from 'echarts'
 require('echarts-wordcloud')
 export default {
   name: 'word_cloud_index',
@@ -25,7 +36,25 @@ export default {
     myChart: null,
     inputName: '',
     inputValue: '',
-    img: require('@/assets/images/hudie.jpg'),
+    typeId: 1,
+    imgType: [
+      {
+        id: 1,
+        label: '蝴蝶',
+        src: require('@/assets/images/hudie.jpg')
+      },
+      {
+        id: 2,
+        label: '头像',
+        src: require('@/assets/images/touxiang.jpg')
+      },
+      {
+        id: 3,
+        label: '心形',
+        src: require('@/assets/images/hard.jpg')
+      }
+    ],
+    // img: require('@/assets/images/hudie.jpg'),
     optionCloud: {
       tooltip: {
         showDelay: 0,
@@ -92,7 +121,7 @@ export default {
         this.myChart.dispose()
       }
       // 生成指定图片形状canvas
-      this.returnBase64Image(this.img, (str) => {
+      this.returnBase64Image(this.imgType[this.typeId - 1].src, (str) => {
         this.optionCloud.series[0].maskImage = str
         setTimeout(() => {
           // this.myChart = echarts.init(document.getElementById('word_cloud_view_id'))
@@ -138,6 +167,9 @@ export default {
         img1.src = str
         callback && callback(img1)
       }
+    },
+    typeChange (val) {
+      this.typeId = val
     }
   },
   mounted () {
@@ -168,6 +200,13 @@ export default {
           background: #3d4450;
           color: #fff;
         }
+      }
+      .type-select{
+        width: 100px;
+      }
+      .chart-name{
+        font-size: 16px;
+        text-align: center;
       }
     }
     #word_cloud_view_id{
