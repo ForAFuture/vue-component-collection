@@ -9,7 +9,7 @@
         <el-button type="primary" style="margin-top:15px" @click="setCloud">添加并立即生成</el-button>
       </el-col>
       <el-col :span="12">
-        <div id="word_cloud_view_id"></div>
+        <div ref="cloudChart" id="word_cloud_view_id"></div>
       </el-col>
     </el-row>
   </div>
@@ -25,6 +25,7 @@ export default {
     myChart: null,
     inputName: '',
     inputValue: '',
+    img: require('@/assets/images/hudie.jpg'),
     optionCloud: {
       tooltip: {
         showDelay: 0,
@@ -44,8 +45,8 @@ export default {
       },
       series: [{
         type: 'wordCloud',
-        shape: 'circle',
-        // maskImage: maskImage,
+        // shape: 'circle',
+        maskImage: '',
         left: 'center',
         top: 'center',
         width: '100%',
@@ -90,8 +91,16 @@ export default {
       if (this.myChart) {
         this.myChart.dispose()
       }
-      this.myChart = echarts.init(document.getElementById('word_cloud_view_id'))
-      this.myChart.setOption(this.optionCloud)
+      // 生成指定图片形状canvas
+      this.returnBase64Image(this.img, (str) => {
+        this.optionCloud.series[0].maskImage = str
+        setTimeout(() => {
+          // this.myChart = echarts.init(document.getElementById('word_cloud_view_id'))
+          this.myChart = echarts.init(this.$refs.cloudChart)
+          this.myChart.setOption(this.optionCloud)
+        }, 0)
+      })
+
       // 点击事件
       // this.myChart.on('click', (params) => {
       //
@@ -105,21 +114,45 @@ export default {
         })
       }
       this.draw_myChart()
+    },
+    // 图片转base64
+    getBase64Image (img) {
+      var canvas = document.createElement('canvas')
+      canvas.width = img.width
+      canvas.height = img.height
+      var ctx = canvas.getContext('2d')
+      ctx.drawImage(img, 0, 0, img.width, img.height)
+      var ext = img.src.substring(img.src.lastIndexOf('.') + 1).toLowerCase()
+      var dataURL = canvas.toDataURL('image/' + ext)
+      return dataURL
+    },
+    returnBase64Image (src, callback) {
+      let maskImage = new Image()
+      maskImage.crossOrigin = '*'
+      maskImage.src = src
+      let str = ''
+      maskImage.onload = () => {
+        str = this.getBase64Image(maskImage)
+        let img1 = new Image()
+        img1.crossOrigin = '*'
+        img1.src = str
+        callback && callback(img1)
+      }
     }
   },
   mounted () {
     this.draw_myChart()
-  },
-  // 设置宽高时，不需要render函数
-  render (h) {
-    return h('div', {
-      attrs: {id: 'word_cloud_view_id'},
-      style: {
-        height: '400px',
-        width: '100%'
-      }
-    })
   }
+  // 设置宽高时，不需要render函数
+  // render (h) {
+  //   return h('div', {
+  //     attrs: {id: 'word_cloud_view_id'},
+  //     style: {
+  //       height: '400px',
+  //       width: '100%'
+  //     }
+  //   })
+  // }
 }
 </script>
 <style lang="scss" scoped>
