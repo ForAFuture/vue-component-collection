@@ -29,6 +29,7 @@
 import cloudData from './couldData'
 // let echarts = require('echarts/lib/echarts')
 import echarts from 'echarts'
+import utils from '@/utils/index.js'
 require('echarts-wordcloud')
 export default {
   name: 'word_cloud_index',
@@ -121,10 +122,13 @@ export default {
         this.myChart.dispose()
       }
       // 生成指定图片形状canvas
-      this.returnBase64Image(this.imgType[this.typeId - 1].src, (str) => {
-        this.optionCloud.series[0].maskImage = str
+      utils.toBase64(this.imgType[this.typeId - 1].src, (src) => {
+        let imageObj = new Image()
+        imageObj.crossOrigin = '*'
+        imageObj.src = src
+        this.optionCloud.series[0].maskImage = imageObj
         setTimeout(() => {
-          // this.myChart = echarts.init(document.getElementById('word_cloud_view_id'))
+          // that.myChart = echarts.init(document.getElementById('word_cloud_view_id'))
           this.myChart = echarts.init(this.$refs.cloudChart)
           this.myChart.setOption(this.optionCloud)
         }, 0)
@@ -143,30 +147,6 @@ export default {
         })
       }
       this.draw_myChart()
-    },
-    // 图片转base64
-    getBase64Image (img) {
-      var canvas = document.createElement('canvas')
-      canvas.width = img.width
-      canvas.height = img.height
-      var ctx = canvas.getContext('2d')
-      ctx.drawImage(img, 0, 0, img.width, img.height)
-      var ext = img.src.substring(img.src.lastIndexOf('.') + 1).toLowerCase()
-      var dataURL = canvas.toDataURL('image/' + ext)
-      return dataURL
-    },
-    returnBase64Image (src, callback) {
-      let maskImage = new Image()
-      maskImage.crossOrigin = '*'
-      maskImage.src = src
-      let str = ''
-      maskImage.onload = () => {
-        str = this.getBase64Image(maskImage)
-        let img1 = new Image()
-        img1.crossOrigin = '*'
-        img1.src = str
-        callback && callback(img1)
-      }
     },
     typeChange (val) {
       this.typeId = val
