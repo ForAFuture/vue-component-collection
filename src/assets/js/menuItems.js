@@ -40,5 +40,11 @@ export default [
     route: '/preview',
     name: 'preview',
     title: '图片预览'
+  },
+  {
+    icon: 'el-icon-folder',
+    route: '/cssShape',
+    name: 'cssShape',
+    title: 'css形状'
   }
 ]

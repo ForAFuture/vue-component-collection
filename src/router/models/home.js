@@ -30,5 +30,21 @@ export default [
       title: '图片预览'
     },
     component: () => import('@/views/preview/index')
+  },
+  {
+    path: '/cssShape',
+    name: 'cssShape',
+    meta: {
+      title: 'css形状'
+    },
+    component: () => import('@/views/cssShape/index')
+  },
+  {
+    path: '/asyncTest',
+    name: 'asyncTest',
+    meta: {
+      title: '异步组件测试'
+    },
+    component: () => import('@/views/asyncComponent/index')
   }
 ]

@@ -75,8 +75,8 @@ export default {
       },
       series: [{
         type: 'wordCloud',
-        // shape: 'circle',
-        maskImage: '',
+        // shape: 'circle', // 生成圆形
+        maskImage: '', // 指定生成图形 图片对象 new Image()
         left: 'center',
         top: 'center',
         width: '100%',

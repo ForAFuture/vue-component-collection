@@ -4,6 +4,11 @@
 .pull-right , .rf{
   float: right;
 }
+.clear::after{
+  display: block;
+  content: '';
+  clear: both;
+}
 .font16 {
   color: #5A5E66;
   font-size: 16px;
