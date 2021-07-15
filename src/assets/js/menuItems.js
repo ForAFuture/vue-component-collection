@@ -46,5 +46,11 @@ export default [
     route: '/cssShape',
     name: 'cssShape',
     title: 'css形状'
+  },
+  {
+    icon: 'el-icon-setting',
+    route: '/scrollbar',
+    name: 'scrollbar',
+    title: '滚动条样式'
   }
 ]

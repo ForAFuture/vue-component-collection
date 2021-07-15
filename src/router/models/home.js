@@ -46,5 +46,13 @@ export default [
       title: '异步组件测试'
     },
     component: () => import('@/views/asyncComponent/index')
+  },
+  {
+    path: '/scrollbar',
+    name: 'scrollbar',
+    meta: {
+      title: '滚动条样式'
+    },
+    component: () => import('@/views/scrollbar/index')
   }
 ]
