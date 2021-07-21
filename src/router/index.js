@@ -8,7 +8,7 @@ import models from './models/index.js'
 Vue.use(Router)
 
 let router = new Router({
-  mode: 'history',
+  // mode: 'history',
   // base: 'view',
   routes: [
     {
