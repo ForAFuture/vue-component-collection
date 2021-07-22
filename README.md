@@ -1,4 +1,4 @@
-# Online address：https://forafuture.github.io/vue-component-collection/dist/#/home
+Online address：https://forafuture.github.io/vue-component-collection/dist/#/home
 
 # vue-component-collection
 
