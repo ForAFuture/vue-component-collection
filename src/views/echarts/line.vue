@@ -1,6 +1,9 @@
 <template>
   <div class="echarts-line">
     <cont-title title="echarts-折线图"></cont-title>
+    <div>
+      echarts图表工具<a href="http://img.9cfcf.com/" target="_blank" rel="noopener noreferrer"></a>
+    </div>
     <v-chart :options="options"></v-chart>
     <v-chart :options="options1"></v-chart>
   </div>
